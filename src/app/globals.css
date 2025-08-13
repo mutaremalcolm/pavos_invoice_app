@@ -1,22 +1,45 @@
-@import "tailwindcss";
+@import "tailwindcss/preflight";
+@import "utilities";
 
-@import "tailwindcss";
+@layer base {
+  :root {
+    --background: 210 33% 97%; /* pavos-bg */
+    --foreground: 210 15% 20%; /* pavos-dark */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-  
-  /* Custom Pavos colors */
-  --color-pavos-dark: #1C2D37;
-  --color-pavos-teal: #4EC7C4;
-  --color-pavos-greenish: #00959F;
-  --color-pavos-sky: #3B9BCC;
-  --color-pavos-bg: #F5F7FA;
+    --card: 0 0% 100%;
+    --card-foreground: 210 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 15% 20%;
+
+    --primary: 178 57% 53%; /* pavos-teal */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 198 57% 52%; /* pavos-sky */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 183 100% 31%; /* pavos-greenish */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 178 57% 53%; /* pavos-teal */
+
+    --radius: 0.5rem;
+  }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-pavos-bg text-pavos-dark;
+  }
 }
