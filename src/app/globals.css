@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
+@import "tailwindcss";
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Custom Pavos colors */
+  --color-pavos-dark: #1C2D37;
+  --color-pavos-teal: #4EC7C4;
+  --color-pavos-greenish: #00959F;
+  --color-pavos-sky: #3B9BCC;
+  --color-pavos-bg: #F5F7FA;
 }
 
 @theme inline {
@@ -10,17 +19,4 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
