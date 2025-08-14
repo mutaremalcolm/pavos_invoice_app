@@ -1,6 +1,6 @@
 {
   "name": "pavos_invoice_app",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -9,7 +9,13 @@
     "lint": "next lint",
     "commitlint": "commitlint --config commitlint.config.js",
     "prepare": "husky",
-    "test": "echo \"No tests yet\" && exit 0"
+    "test": "echo \"No tests yet\" && exit 0",
+    "version:patch": "npm version patch --no-git-tag-version",
+    "version:minor": "npm version minor --no-git-tag-version",
+    "version:major": "npm version major --no-git-tag-version",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "tag:create": "git tag v$(node -p 'require(\"./package.json\").version')",
+    "release:manual": "npm run changelog && git add CHANGELOG.md && git commit -m 'docs: update changelog' && npm run tag:create"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.3",
@@ -30,6 +36,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "conventional-changelog-cli": "^5.0.0",
     "eslint": "^9.33.0",
     "eslint-config-next": "15.4.6",
     "eslint-config-prettier": "^10.1.8",
