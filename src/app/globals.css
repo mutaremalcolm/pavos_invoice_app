@@ -1,5 +1,5 @@
 @import "tailwindcss/preflight";
-@import "utilities";
+@import "tailwindcss/utilities";
 
 @layer base {
   :root {
@@ -37,7 +37,7 @@
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-neutral-200;
   }
   body {
     @apply bg-pavos-bg text-pavos-dark;
