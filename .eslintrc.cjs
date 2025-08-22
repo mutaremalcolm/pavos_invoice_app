@@ -37,11 +37,14 @@ module.exports = {
         'packages/*/dist',
         'packages/*/public/dist',
         'chat-bot.js',
+        'src/generated/prisma/**',
     ],
     rules: {
         qoutes: ['errors', 'single', { avoidEsscape: true, allowTemplateLiterals: false }],
         semi: ['error', 'never'],
-        '@typescript-eslint/no-unused-vars': [2, { args: 'none' }],
+        '@typescript-eslint/no-unused-vars': [1, { args: 'none' }],
+        '@typescript-eslint/no-unused-expressions': 'warn',
+        '@typescript-eslint/no-this-alias': 'warn',
         'no-debugger': 'off',
         'prettier/prettier': [
             'warn',
