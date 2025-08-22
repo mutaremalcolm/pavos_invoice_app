@@ -38,3 +38,5 @@ next-env.d.ts
 context.config.json
 context.txt
 .idea
+
+/src/generated/prisma
